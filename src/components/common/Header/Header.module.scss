@@ -1,0 +1,6 @@
+@use '@/styles/variables';
+
+.title {
+	color: variables.$color-black;
+	text-align: center;
+}

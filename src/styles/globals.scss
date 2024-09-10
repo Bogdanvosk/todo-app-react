@@ -1,0 +1,50 @@
+@use 'reset';
+@use 'variables';
+@use 'mixins';
+
+body {
+  font-family: variables.$primary-font;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 1.09;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  @include mixins.mobile {
+    font-size: 4rem;
+    line-height: 1.12;
+  }
+}
+
+input {
+  width: 75%;
+  padding: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.42;
+  font-family: inherit;
+  color: variables.$color-black;
+  background-color: variables.$color-white;
+  border: 1px solid variables.$color-beige-200;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  outline: none;
+
+  @include mixins.hover {
+    background-color: variables.$color-beige-100;
+  }
+
+  &:focus {
+    background-color: variables.$color-beige-100;
+    border: 1px solid variables.$color-gray-300;
+  }
+
+  @include mixins.tablet {
+    width: 90%;
+  }
+
+  @media (max-width: variables.$xs) {
+    width: 100%;
+  }
+}

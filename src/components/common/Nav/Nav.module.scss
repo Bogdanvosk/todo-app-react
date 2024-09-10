@@ -1,0 +1,13 @@
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 3rem;
+	row-gap: 0.5rem;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+}
+
+.count {
+	font-size: 20px;
+}

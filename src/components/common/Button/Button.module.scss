@@ -1,0 +1,22 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  font-family: inherit;
+  color: variables.$color-black;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  @include mixins.hover {
+    background-color: variables.$color-beige-200;
+  }
+
+  &:active {
+    background-color: darken(variables.$color-beige-200, 10%);
+  }
+}
