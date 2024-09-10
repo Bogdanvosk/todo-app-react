@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 import TodoItem from '../TodoItem/TodoItem';
 
-import styles from './TodoItems.module.scss';
+import s from './TodoItems.module.scss';
 
 const TodoItems = ({ items }) => {
   return (
-    <div className={styles.items}>
+    <div className={s.items}>
       {items.map((item) => (
         <TodoItem key={item.id} item={item} />
       ))}

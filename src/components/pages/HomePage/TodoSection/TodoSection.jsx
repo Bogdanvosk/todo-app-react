@@ -5,7 +5,7 @@ import MainInput from '@/components/common/MainInput/Input'
 import TodoItems from '@/components/common/TodoItems/TodoItems'
 import Nav from '@/components/common/Nav/Nav'
 
-import styles from './TodoSection.module.scss'
+import s from './TodoSection.module.scss'
 
 const TodoSection = () => {
 	const { todos, filter } = useSelector(state => state.todos)
@@ -25,10 +25,10 @@ const TodoSection = () => {
 	}
 
 	return (
-		<section className={styles.todo}>
+		<section className={s.todo}>
 			<Container>
 				<Nav />
-				<div className={styles.inputWrapper}>
+				<div className={s.inputWrapper}>
 					<MainInput placeholder='What needs to be done?' />
 				</div>
 				<TodoItems items={filteredTodos()} />

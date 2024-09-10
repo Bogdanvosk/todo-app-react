@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import { useDispatch } from 'react-redux';
 import { clearTodos, selectTodos } from '@/store/features/todosSlice';
@@ -7,7 +7,7 @@ import { content } from '@/content';
 import Filter from '../Filter/Filter';
 import Button from '../Button/Button';
 
-import styles from './Nav.module.scss';
+import s from './Nav.module.scss';
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -21,21 +21,15 @@ const Nav = () => {
   };
 
   return (
-    <div className={styles.nav}>
+    <div className={s.nav}>
       <Filter items={content.filter.items} />
-      <Button
-        onClick={handleClearTodos}
-        className={classNames(styles.button, styles.clear)}
-      >
+      <Button onClick={handleClearTodos} className={cn(s.button, s.clear)}>
         Clear completed
       </Button>
-      <Button
-        onClick={handleSelectTodos}
-        className={classNames(styles.button, styles.select)}
-      >
+      <Button onClick={handleSelectTodos} className={cn(s.button, s.select)}>
         Select all
       </Button>
-      <span className={styles.count}></span>
+      <span className={s.count}></span>
     </div>
   );
 };
