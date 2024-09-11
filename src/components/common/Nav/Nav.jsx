@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
 import { useDispatch } from 'react-redux';
-import { clearTodos, selectTodos } from '@/store/features/todosSlice';
+import { clearTodos, selectTodos } from '@/store/features/todos';
 import { content } from '@/content';
 
 import Filter from '../Filter/Filter';

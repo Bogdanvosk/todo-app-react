@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTodo, checkTodo } from '@/store/features/todosSlice';
+import { deleteTodo, checkTodo } from '@/store/features/todos';
 
 import TodoInput from '../TodoInput/TodoInput';
 import Icon from '../Icon/Icon';

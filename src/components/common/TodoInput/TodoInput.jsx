@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { forwardRef, useRef, useState } from 'react';
 import { useOutsideClick } from '@/hooks/useOutsideClick';
 import { useDispatch } from 'react-redux';
-import { changeTodo, deleteTodo } from '@/store/features/todosSlice';
+import { changeTodo, deleteTodo } from '@/store/features/todos';
 
 const TodoInput = forwardRef(
   ({ item, className = '', stopEditing = () => {}, ...props }, ref) => {

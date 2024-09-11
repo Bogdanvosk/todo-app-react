@@ -2,14 +2,15 @@ import cn from 'classnames';
 import PropTypes from 'prop-types';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from '@/store/features/todosSlice';
+import { setFilter } from '@/store/features/todos';
+import { selectActiveFilter } from '@/store/features/todos/selectors';
 
 import Button from '../Button/Button';
 
 import s from './Filter.module.scss';
 
 const Filter = ({ items }) => {
-  const { filter } = useSelector((state) => state.todos);
+  const filter = useSelector(selectActiveFilter);
   const dispatch = useDispatch();
 
   const handleFilter = (item) => {
