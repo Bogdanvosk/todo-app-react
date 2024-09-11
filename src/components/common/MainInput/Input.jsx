@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 
-import { addTodo, changeInput } from '@/store/features/todosSlice';
+import { addTodo, changeInput } from '@/store/features/todos';
 import { useSelector, useDispatch } from 'react-redux';
 import { useOutsideClick } from '@/hooks/useOutsideClick';
+import { selectInput } from '@/store/features/todos/selectors';
 
 const MainInput = ({ placeholder, className = '', ...props }) => {
   const mainInputRef = useRef(null);
 
   const dispatch = useDispatch();
-  const { todoInput } = useSelector((state) => state.todos);
+  const todoInput = useSelector(selectInput);
 
   const addNewTodo = () => {
     const newTodo = {
@@ -47,7 +48,7 @@ const MainInput = ({ placeholder, className = '', ...props }) => {
       value={todoInput}
       onChange={handleMainInput}
       onKeyDown={handleAddTodo}
-      type="text"
+      type='text'
       placeholder={placeholder}
       className={className}
       {...props}

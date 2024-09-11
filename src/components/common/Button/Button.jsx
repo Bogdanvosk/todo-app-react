@@ -1,12 +1,12 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 import PropTypes from 'prop-types';
 
-import styles from './Button.module.scss';
+import s from './Button.module.scss';
 
 const Button = ({ children, type = 'button', className = '', ...props }) => {
   return (
     <button
-      className={classNames(styles.button, className)}
+      className={cn(s.button, className)}
       type={type}
       {...props}
     >
